@@ -1,26 +1,16 @@
 fn main() {
-    for tabs in 1..=5 {
-        println!("Checking tab {tabs}...")
+    let tabs = ["Google", "Youtube", "Github"];
+    for tab in tabs {
+        println!("Opened tab: {}", tab);
     }
 
-    let mut loading = 0;
+    let mut taabs = vec!["Google", "YouTube"];
+    taabs.push("Github");
+    taabs.push("Reddit");
+    taabs.remove(1);
 
-    while loading <= 100 {
-        println!("Loading: {loading}%");
-        loading += 20;
-    }
-
-    let mut counter = 0;
-
-    loop {
-        println!("Starting...");
-        counter += 1;
-
-        if counter >= 3 {
-            println!("Aegis started!");
-            break;
-        }
-    }
-
+    println!("Current tabs:");
+    println!("{:?}", taabs);
+    println!("Total tabs:", taabs.len());
 }
 
